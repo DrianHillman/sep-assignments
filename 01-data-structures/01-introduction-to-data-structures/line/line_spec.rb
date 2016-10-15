@@ -43,6 +43,10 @@ RSpec.describe Line, type: Class do
       person = line.search("Ted")
       expect(person).to eq "Ted"
     end
+    it "fails to find a person who is not in line" do
+      person = line.search("Brady")
+      expect(person).to be_nil
+    end
   end
 
   describe "#join" do
