@@ -1,5 +1,3 @@
-How does your data structure allow developers to access and manipulate the data?
-
 # Software Engineering Principles
 ## Assignment 01
 ### Line
