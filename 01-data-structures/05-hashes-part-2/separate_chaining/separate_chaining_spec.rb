@@ -4,6 +4,7 @@ require_relative 'separate_chaining'
 
 RSpec.describe SeparateChaining, type: Class do
   let(:star_wars_movies) { SeparateChaining.new(6) }
+  
 
   before do
     star_wars_movies["Star Wars: The Phantom Menace"] = "Number One"
@@ -91,6 +92,18 @@ RSpec.describe SeparateChaining, type: Class do
       expect(movies["A New Hope"]).to eq "Average"
       expect(movies["Empire Strikes Back"]).to eq "Excellent"
       expect(movies["Return of the Jedi"]).to eq "The Best"
+    end
+  end
+  
+  describe "#printHash" do
+    it "prints the entire hash to the console when invoked" do
+      myHash = SeparateChaining.new(100)
+      (0..myHash.size-1).each do |i|
+        myHash[i.to_s] = i.to_s
+      end
+      print "\n\n"
+      myHash.printHash
+      print "\n\n"
     end
   end
 end

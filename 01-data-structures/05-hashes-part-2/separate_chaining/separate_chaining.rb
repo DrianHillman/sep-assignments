@@ -87,4 +87,24 @@ class SeparateChaining
 
     @items = new_items
   end
+  
+  def printHash
+    @items.each do |x|
+      if x.is_a? LinkedList
+        i = x.head
+        
+        if i.next === nil
+          print i.value
+        else
+          while i != nil do
+            print i.value
+            print ", " if i.next != nil
+            i = i.next
+          end
+        end
+        print "\n"
+      end
+    end
+    puts "\n\nLOAD FACTOR: " + load_factor.to_s
+  end
 end
