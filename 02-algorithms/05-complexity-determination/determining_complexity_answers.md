@@ -13,10 +13,9 @@
 --- 
 
 #### 3) What's the Big-O of the following algorithm? Submit your work and reasoning with your solution.
-**O(n)** | This algorithm also runs linear time. The two `.length.times do` loops give us 2n, however, we remove the constant in asymptotic notation, leaving us with O(n) .
+**O(n<sup>2</sup>)** | This algorithm runs at— exponential time. The two `.length.times do` loops compound to give us exponential complexity at O(n<sup>2</sup>). Hence why two dimensional arrays are commonly relied upon as backbone data structures compared to graphs or trees.
 
 ![algorithm](https://cldup.com/pbU3qFrO4k.png)
-<!--Double check that it's 2n and not n^2, ask John-->
 
 ---
 
